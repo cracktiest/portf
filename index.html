@@ -133,6 +133,8 @@
     }
 
     .card {
+      max-width: 900px;
+      margin: 0 auto;
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 30px;
@@ -247,6 +249,20 @@
       padding-left: 20px;
       color: #cbd5e1;
       line-height: 1.8;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      align-items: start;
+    }
+
+    .experience-card,
+    .education-card {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 35px;
     }
 
     .projects-grid {
@@ -578,9 +594,124 @@
   <section id="projects">
     <div class="container">
 
-      <h2 class="section-title">Featured Projects</h2>
+      <h2 class="section-title">Featured Robotics & AI Projects</h2>
 
       <div class="projects-grid">
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="RFID Tracking" style="width:100%; border-radius:20px; margin-bottom:20px; height:220px; object-fit:cover;">
+
+          <h3>RFID Garment Tracking</h3>
+
+          <p>
+            Smart RFID garment tracking system developed for real-time production monitoring,
+            bundle tracking, and manufacturing traceability across garment production workflows.
+          </p>
+
+          <br>
+
+          <p class="text-muted">
+            Built with significantly lower implementation cost compared to enterprise competitors,
+            reducing system investment from more than 1 billion IDR to under 100 million IDR.
+          </p>
+
+          <div class="tech-stack">
+            <span>RFID</span>
+            <span>Node-RED</span>
+            <span>Industrial IoT</span>
+            <span>Automation</span>
+          </div>
+
+          <div style="margin-top:25px; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,0.08);">
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/u2BfVmmaWvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1200&auto=format&fit=crop" alt="Computer Vision Robotic Arm" style="width:100%; border-radius:20px; margin-bottom:20px; height:220px; object-fit:cover;">
+
+          <h3>Computer Vision based Robotic Arm</h3>
+
+          <p>
+            AI-powered robotic arm capable of understanding voice commands,
+            detecting objects using YOLO computer vision, and executing autonomous pick-and-place actions.
+          </p>
+
+          <br>
+
+          <p class="text-muted">
+            Integrated OpenAI reasoning with computer vision systems to create
+            intelligent robotic interaction and autonomous object handling.
+          </p>
+
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>YOLO</span>
+            <span>OpenAI</span>
+            <span>Robotics</span>
+          </div>
+
+          <div style="margin-top:25px; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,0.08);">
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/u2BfVmmaWvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?q=80&w=1200&auto=format&fit=crop" alt="Collaborative Robot" style="width:100%; border-radius:20px; margin-bottom:20px; height:220px; object-fit:cover;">
+
+          <h3>Collaborative Arm Robot</h3>
+
+          <p>
+            Human-collaborative robotic arm system developed for industrial automation,
+            production assistance, and smart factory operations.
+          </p>
+
+          <br>
+
+          <p class="text-muted">
+            Designed for safe human-robot collaboration in manufacturing environments
+            while improving operational efficiency and precision.
+          </p>
+
+          <div class="tech-stack">
+            <span>Collaborative Robot</span>
+            <span>Automation</span>
+            <span>Industrial Robotics</span>
+          </div>
+
+          <div style="margin-top:25px; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,0.08);">
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/u2BfVmmaWvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="AI Productivity" style="width:100%; border-radius:20px; margin-bottom:20px; height:220px; object-fit:cover;">
+
+          <h3>Productivity with AI</h3>
+
+          <p>
+            Artificial intelligence system designed to optimize garment production efficiency,
+            productivity analytics, and manufacturing workflow performance.
+          </p>
+
+          <br>
+
+          <p class="text-muted">
+            Utilizing AI-driven analytics and real-time industrial monitoring to support
+            smarter manufacturing decisions and operational improvements.
+          </p>
+
+          <div class="tech-stack">
+            <span>Artificial Intelligence</span>
+            <span>Analytics</span>
+            <span>Smart Factory</span>
+            <span>Industry 4.0</span>
+          </div>
+
+          <div style="margin-top:25px; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,0.08);">
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/u2BfVmmaWvk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
 
         <div class="project-card">
           <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1200&auto=format&fit=crop" alt="Visual AI" style="width:100%; border-radius:20px; margin-bottom:20px; height:220px; object-fit:cover;">
@@ -762,29 +893,191 @@
 
       <div class="card education-card">
         <h3>Universitas Muria Kudus</h3>
-        <p class="text-muted">Bachelor of Engineering (B.E.) - Electrical & Electronics Engineering • 2016 - 2020</p>
+        <p class="text-muted">
+          Bachelor of Engineering (B.E.) - Electrical and Electronics Engineering
+          • Aug 2016 – Aug 2020
+        </p>
 
-        <br><br>
+        <br>
 
-        <h3>Cisco Networking Academy</h3>
-        <p class="text-muted">CCNA Routing & Switching • 2013 - 2015</p>
+        <p>
+          Activities and societies: Robotics
+        </p>
 
-        <br><br>
+        <br>
 
-        <h3>SMK Muhammadiyah Kudus</h3>
-        <p class="text-muted">Computer Network Engineering • 2012 - 2015</p>
+        <ul>
+          <li>Completed research project focused on developing automatic control systems for cigarette production machinery at Djarum Oasis Kretek Factory.</li>
+          <li>Participated in Community Service Program in Tondokerto, Pati.</li>
+          <li>Conducted industrial field work studies at LEN Industri and Badan Tenaga Nuklir Nasional (BATAN).</li>
+        </ul>
+
+        <br>
+
+        <div class="tech-stack">
+          <span>Project Management</span>
+          <span>Microcontrollers</span>
+          <span>Automation</span>
+          <span>Electronics</span>
+          <span>Instrumentation</span>
+          <span>Robotics</span>
+        </div>
       </div>
 
       <br><br>
 
-      <h2 class="section-title">Certifications</h2>
+      <div class="card education-card">
+        <h3>Cisco Networking Academy</h3>
+        <p class="text-muted">
+          CCNA - Computer Systems Networking and Telecommunications
+          • 2013 – 2015
+        </p>
+
+        <br>
+
+        <p>
+          Achieved Letter of Merit in 2 networking courses.
+        </p>
+
+        <br>
+
+        <p class="text-muted">
+          Networking Academy ID: 28816601
+        </p>
+
+        <br>
+
+        <div class="tech-stack">
+          <span>Cisco IOS</span>
+          <span>Packet Tracer</span>
+          <span>Networking</span>
+          <span>Routing & Switching</span>
+          <span>TCP/IP</span>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="card education-card">
+        <h3>SMK Muhammadiyah Kudus</h3>
+        <p class="text-muted">
+          Computer Network Engineering • 2012 – 2015
+        </p>
+
+        <br>
+
+        <p>
+          Activities and societies: Computer Hardware
+        </p>
+
+        <br>
+
+        <div class="tech-stack">
+          <span>Web Servers</span>
+          <span>Cisco Networking</span>
+          <span>Computer Hardware</span>
+          <span>Linux</span>
+          <span>Networking</span>
+        </div>
+      </div>
+
+      <br><br>
+
+      <h2 class="section-title">Licenses & Certifications</h2>
 
       <div class="card education-card">
         <h3>Analyze Images with the Cloud Vision API Skill Badge</h3>
+        <p class="text-muted">Google • Issued Sep 2024</p>
+
         <br>
-        <h3>FreeRTOS</h3>
-        <br>
+
+        <p>
+          Certification focused on computer vision technologies,
+          image analysis, and cloud-based AI processing using Google Cloud Vision API.
+        </p>
+
+        <br><br>
+
         <h3>Generative AI Explorer - Vertex AI</h3>
+        <p class="text-muted">Google • Issued Aug 2024</p>
+
+        <br>
+
+        <p>
+          Credential ID: 10907833
+        </p>
+
+        <br>
+
+        <p>
+          Demonstrated knowledge in generative AI systems,
+          machine learning workflows, and Vertex AI ecosystem.
+        </p>
+
+        <br><br>
+
+        <h3>FreeRTOS</h3>
+        <p class="text-muted">PT. Nusabot Inovasi Teknologi • Issued Feb 2024</p>
+
+        <br>
+
+        <p>
+          Embedded systems and real-time operating systems certification
+          for microcontroller-based automation development.
+        </p>
+
+        <br><br>
+
+        <h3>Program Magang Mahasiswa Bersertifikat</h3>
+        <p class="text-muted">Forum Human Capital Indonesia • Issued Aug 2020</p>
+
+        <br>
+
+        <p>
+          National certified internship program focused on industrial engineering,
+          practical industry experience, and professional workforce readiness.
+        </p>
+
+        <br><br>
+
+        <h3>SertifiCAT</h3>
+        <p class="text-muted">Badan Kepegawaian Negara • Issued Sep 2021 · Expires Sep 2023</p>
+
+        <br>
+
+        <p>
+          Credential ID: 6534A0E70BE612A82D8F270D9933901A
+        </p>
+
+        <br>
+
+        <p>
+          National competency certification program for professional workforce development.
+        </p>
+
+        <br><br>
+
+        <h3>CCNA Discovery: Working at a Small-to-Medium Business or ISP</h3>
+        <p class="text-muted">Cisco Networking Academy • Issued Jul 2015 · Expires Jul 2017</p>
+
+        <br>
+
+        <p>
+          Networking certification focused on routing, switching,
+          and ISP-scale networking infrastructure.
+        </p>
+
+        <br><br>
+
+        <h3>CCNA Discovery: Networking for Home and Small Businesses</h3>
+        <p class="text-muted">Cisco Networking Academy • Issued Sep 2014 · Expires Sep 2016</p>
+
+        <br>
+
+        <p>
+          Fundamental networking certification covering TCP/IP,
+          networking devices, and small business infrastructure deployment.
+        </p>
       </div>
 
       <br><br>
@@ -793,14 +1086,57 @@
 
       <div class="card education-card">
         <h3>Best Graduate - Electrical Engineering Undergraduate Program</h3>
+
         <br>
+
+        <p>
+          Awarded for outstanding academic achievement,
+          engineering performance, and research contribution during undergraduate studies.
+        </p>
+
+        <br><br>
+
         <h3>Academic Achievement Improvement Scholarship</h3>
+
         <br>
+
+        <p>
+          Scholarship recipient recognized for continuous academic excellence
+          and performance improvement throughout engineering studies.
+        </p>
+
+        <br><br>
+
         <h3>Highest Test Score of Electrical Engineering Admission</h3>
+
         <br>
+
+        <p>
+          Achieved the highest entrance examination score
+          for the Electrical Engineering program admission.
+        </p>
+
+        <br><br>
+
         <h3>Best Employee</h3>
+
         <br>
+
+        <p>
+          Recognized for innovation, leadership, industrial automation initiatives,
+          and contributions to digital transformation projects.
+        </p>
+
+        <br><br>
+
         <h3>Stakeholder Representative – Accreditation Assessment</h3>
+
+        <br>
+
+        <p>
+          Selected as stakeholder representative during accreditation assessment activities,
+          contributing professional insights from industrial engineering and technology sectors.
+        </p>
       </div>
 
       <br><br>
