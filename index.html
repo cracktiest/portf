@@ -38,15 +38,33 @@
     /* HERO */
 
     .hero {
+      position: relative;
       min-height: 100vh;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
       background:
+        linear-gradient(rgba(5,8,22,0.88), rgba(5,8,22,0.92)),
+        url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat,
         radial-gradient(circle at top right, rgba(0,255,255,0.2), transparent 30%),
         radial-gradient(circle at bottom left, rgba(0,100,255,0.2), transparent 25%),
         #050816;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(0,255,255,0.03) 0px,
+          rgba(0,255,255,0.03) 1px,
+          transparent 1px,
+          transparent 80px
+        );
+      pointer-events: none;
     }
 
     .hero-grid {
@@ -141,6 +159,31 @@
     .profile-card span:last-child {
       font-weight: 600;
       text-align: right;
+    }
+
+    .profile-image {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(0,255,255,0.5);
+      margin: 0 auto 30px;
+      display: block;
+      box-shadow:
+        0 0 20px rgba(0,255,255,0.5),
+        0 0 50px rgba(0,255,255,0.3),
+        0 0 90px rgba(0,255,255,0.2);
+      animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(1.02);
+      }
     }
 
     section {
@@ -323,7 +366,7 @@
     <div class="container hero-grid">
 
       <div>
-        <p class="subtitle">Robotics • AI • Automation</p>
+        <p class="subtitle">ROBOTICS • AI • AMR • AUTOMATION</p>
 
         <h1>
           Rizki Saputra
@@ -331,18 +374,21 @@
         </h1>
 
         <p>
-          Robotic & Development Supervisor at PT Gistex Garmen Indonesia.
-          Specializing in Robotics, AI Vision Systems, Industrial Automation,
-          IoT, AMR, Embedded Systems, and Smart Manufacturing Solutions.
+          Senior Robotic Automation Engineer specializing in robotics,
+          AI vision systems, AMR technology, industrial automation,
+          embedded systems, and smart manufacturing solutions.
+          Passionate about designing futuristic Industry 4.0 & 5.0 systems
+          integrating robotic arms, autonomous mobile robots, and AI-driven factories.
         </p>
 
         <div class="hero-buttons">
           <a href="#projects" class="btn-primary">View Projects</a>
-          <a href="mailto:rizkisaputrasembiring.rss@gmail.coming.rss@gmail.coming.rss@gmail.com" class="btn-secondary">Contact Me</a>
+          <a href="mailto:rizkisaputrasembiring.rss@gmail.com" class="btn-secondary">Contact Me</a>
         </div>
       </div>
 
       <div class="card profile-card">
+        <img src="profile.jpg" alt="Rizki Saputra Sembiring" class="profile-image">
         <div>
           <span>Current Role</span>
           <span>Robotic & Development Supervisor</span>
@@ -380,18 +426,21 @@
         <h2 class="section-title">About Me</h2>
 
         <p class="text-muted">
-          I am an engineer focused on robotics, industrial AI systems,
-          computer vision, IoT, and smart automation technologies.
-          My work involves improving manufacturing efficiency through
-          robotics integration and intelligent systems.
+          Senior Robotic Automation Engineer based in West Java, Indonesia,
+          specializing in robotics, industrial AI systems, computer vision,
+          IoT, AMR, embedded systems, and smart manufacturing technologies.
+          Passionate about Industry 4.0 & 5.0 transformation through
+          automation and intelligent systems integration.
         </p>
 
         <br>
 
         <p class="text-muted">
-          I lead teams developing visual AI, AMR systems, industrial
-          monitoring dashboards, automation projects, and embedded systems
-          for garment manufacturing industries.
+          Currently leading and supervising multidisciplinary engineering teams
+          focused on robotics, automation, AI, research, and industrial IoT.
+          Experienced in designing scalable automation architectures,
+          developing AI computer vision systems, integrating AMR technologies,
+          and delivering enterprise-scale smart manufacturing solutions.
         </p>
       </div>
 
@@ -399,22 +448,33 @@
         <h2 class="section-title">Skills & Technologies</h2>
 
         <div class="skills">
-          <div class="skill">Robotics</div>
+          <div class="skill">Robotics Engineering</div>
           <div class="skill">Artificial Intelligence</div>
           <div class="skill">Computer Vision</div>
           <div class="skill">Industrial Automation</div>
-          <div class="skill">IoT Development</div>
           <div class="skill">AMR / AGV</div>
+          <div class="skill">Industrial IoT</div>
           <div class="skill">Embedded Systems</div>
           <div class="skill">ROS2</div>
           <div class="skill">Python</div>
-          <div class="skill">React</div>
           <div class="skill">Node-RED</div>
           <div class="skill">MQTT</div>
+          <div class="skill">React</div>
+          <div class="skill">SQL</div>
           <div class="skill">Arduino</div>
           <div class="skill">ESP32</div>
-          <div class="skill">SQL</div>
+          <div class="skill">RFID</div>
+          <div class="skill">Fullstack Development</div>
+          <div class="skill">Industrial Networking</div>
+          <div class="skill">PLC Integration</div>
+          <div class="skill">Smart Factory</div>
+          <div class="skill">Cross-functional Leadership</div>
+          <div class="skill">Automation Architecture</div>
+          <div class="skill">Machine Vision</div>
+          <div class="skill">Cloud Integration</div>
+          <div class="skill">CBTC & Railway Systems</div>
         </div>
+      </div>
       </div>
 
     </div>
@@ -423,19 +483,92 @@
   <!-- EXPERIENCE -->
   <section class="experience">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title">Professional Experience</h2>
 
       <div class="card experience-card">
-        <h3>Robotic & Development Supervisor</h3>
-
-        <p class="text-muted">PT Gistex Garmen Indonesia</p>
+        <h3>Robotic & Automation Supervisor</h3>
+        <p class="text-muted">PT GISTEX • March 2025 - Present</p>
 
         <ul>
-          <li>Leading robotics, AI, IoT, and industrial automation teams.</li>
-          <li>Developing computer vision systems for production and safety monitoring.</li>
-          <li>Managing AMR integration and automation projects.</li>
-          <li>Building industrial dashboards and smart monitoring systems.</li>
-          <li>Researching Industry 4.0 & 5.0 technologies.</li>
+          <li>Leading and supervising teams of engineers working on IoT, AMR, robotics, automation, AI, and industrial research.</li>
+          <li>Designing robotic system architectures, automation standards, workflow integrations, and deployment strategies.</li>
+          <li>Managing smart manufacturing projects and cross-division industrial automation initiatives.</li>
+          <li>Driving innovation and implementing scalable Industry 4.0 & 5.0 technologies.</li>
+        </ul>
+      </div>
+
+      <br><br>
+
+      <div class="card experience-card">
+        <h3>Artificial Intelligence Engineer (Computer Vision)</h3>
+        <p class="text-muted">PT GISTEX • August 2024 - March 2025</p>
+
+        <ul>
+          <li>Developed AI computer vision systems for object detection, image segmentation, and real-time video analysis.</li>
+          <li>Designed industrial AI systems for manufacturing monitoring and production analytics.</li>
+          <li>Handled high-impact industrial AI projects valued at more than 500 million IDR.</li>
+        </ul>
+      </div>
+
+      <br><br>
+
+      <div class="card experience-card">
+        <h3>Embedded System Engineer</h3>
+        <p class="text-muted">PT GISTEX • January 2022 - March 2025</p>
+
+        <ul>
+          <li>Designed and developed IoT and automation solutions from concept to deployment.</li>
+          <li>Developed firmware, cloud integrations, smart factory systems, and productivity monitoring platforms.</li>
+          <li>Successfully reduced IoT and automation costs by approximately 1 billion IDR.</li>
+          <li>Collaborated with R&D divisions to develop automated sewing machine technologies.</li>
+        </ul>
+      </div>
+
+      <br><br>
+
+      <div class="card experience-card">
+        <h3>Full Stack Engineer</h3>
+        <p class="text-muted">PT GISTEX • October 2022 - March 2024</p>
+
+        <ul>
+          <li>Designed and developed web and desktop applications for industrial digitization projects.</li>
+          <li>Managed databases, optimized query performance, and ensured data integrity.</li>
+          <li>Collaborated with Industrial Engineering and Digital Transformation divisions.</li>
+        </ul>
+      </div>
+
+      <br><br>
+
+      <div class="card experience-card">
+        <h3>Signalling, Telecommunication & Electricity Engineer</h3>
+        <p class="text-muted">PT Kereta Api Indonesia (Persero) • March 2020 - August 2020</p>
+
+        <ul>
+          <li>Worked with Sintelis core engineering team at KAI HQ Bandung.</li>
+          <li>Learned CBTC technology, railway communication systems, electrical-mechanical signaling, and railway electricity systems.</li>
+        </ul>
+      </div>
+
+      <br><br>
+
+      <div class="card experience-card">
+        <h3>Research Intern</h3>
+        <p class="text-muted">PT DJARUM • January 2020 - February 2020</p>
+
+        <ul>
+          <li>Researched automation systems for cigarette tip paper processing machinery as thesis project.</li>
+        </ul>
+      </div>
+
+      <br><br>
+
+      <div class="card experience-card">
+        <h3>Electrical Engineer</h3>
+        <p class="text-muted">PT DJARUM • July 2018 - September 2018</p>
+
+        <ul>
+          <li>Collaborated with senior engineers on electrical systems, automation, and production machinery.</li>
+          <li>Successfully upgraded control panel and vision sensor systems with project value exceeding 2 billion IDR.</li>
         </ul>
       </div>
     </div>
@@ -450,69 +583,172 @@
       <div class="projects-grid">
 
         <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1200&auto=format&fit=crop" alt="Visual AI" style="width:100%; border-radius:20px; margin-bottom:20px; height:220px; object-fit:cover;">
+
           <h3>Visual AI - Yellow Line Detection</h3>
 
           <p>
-            Computer vision system for detecting safety line violations in industrial environments.
+            Industrial AI vision system developed to detect safety violations
+            when operators cross restricted yellow-line production zones.
+            Designed for real-time monitoring using AI object detection and CCTV integration.
+          </p>
+
+          <br>
+
+          <p class="text-muted">
+            Features:
+            Real-time monitoring, AI object detection, safety analytics dashboard,
+            violation notifications, and production-area monitoring.
           </p>
 
           <div class="tech-stack">
             <span>Python</span>
-            <span>OpenCV</span>
             <span>YOLO</span>
-            <span>AI Vision</span>
+            <span>OpenCV</span>
+            <span>Industrial AI</span>
           </div>
 
-          <a href="#" class="youtube-btn">Watch Demo →</a>
+          <div style="margin-top:25px; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,0.08);">
+            <iframe 
+              width="100%" 
+              height="220" 
+              src="https://www.youtube.com/embed/u2BfVmmaWvk" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <a href="https://www.youtube.com/watch?v=u2BfVmmaWvk" target="_blank" class="youtube-btn">
+            Open on YouTube →
+          </a>
         </div>
 
         <div class="project-card">
-          <h3>AMR Gate Automation System</h3>
+          <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=1200&auto=format&fit=crop" alt="AMR Robot" style="width:100%; border-radius:20px; margin-bottom:20px; height:220px; object-fit:cover;">
+
+          <h3>AMR Smart Gate Automation</h3>
 
           <p>
-            MQTT and HTTP based automation system integrated with AMR robots for industrial gates.
+            Autonomous Mobile Robot integration system for automated industrial gate access
+            using MQTT communication, ESP32 controllers, and Node-RED orchestration.
+          </p>
+
+          <br>
+
+          <p class="text-muted">
+            Features:
+            AMR communication, smart gate control, real-time IoT monitoring,
+            industrial automation workflow, and remote access system.
           </p>
 
           <div class="tech-stack">
             <span>ESP32</span>
             <span>MQTT</span>
             <span>Node-RED</span>
-            <span>IoT</span>
+            <span>AMR</span>
           </div>
 
-          <a href="#" class="youtube-btn">Watch Demo →</a>
+          <div style="margin-top:25px; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,0.08);">
+            <iframe 
+              width="100%" 
+              height="220" 
+              src="https://www.youtube.com/embed/u2BfVmmaWvk" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <a href="https://www.youtube.com/watch?v=u2BfVmmaWvk" target="_blank" class="youtube-btn">
+            Open on YouTube →
+          </a>
         </div>
 
         <div class="project-card">
-          <h3>Container Detection & Counting System</h3>
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22731d8c4f?q=80&w=1200&auto=format&fit=crop" alt="Robotic Arm" style="width:100%; border-radius:20px; margin-bottom:20px; height:220px; object-fit:cover;">
 
-          <p>
-            AI-based system for detecting container status and counting accessories automatically.
-          </p>
-
-          <div class="tech-stack">
-            <span>Computer Vision</span>
-            <span>Industrial AI</span>
-            <span>Python</span>
-          </div>
-
-          <a href="#" class="youtube-btn">Watch Demo →</a>
-        </div>
-
-        <div class="project-card">
           <h3>Robotic Arm Production Improvement</h3>
 
           <p>
-            Automation and production improvement using robotic arm integration.
+            Smart robotic arm integration project designed to improve production efficiency,
+            reduce manual operations, and optimize industrial workflows.
+          </p>
+
+          <br>
+
+          <p class="text-muted">
+            Features:
+            Production automation, robotic movement optimization,
+            industrial workflow integration, and smart manufacturing implementation.
           </p>
 
           <div class="tech-stack">
             <span>Robotics</span>
             <span>Automation</span>
-            <span>Industrial Engineering</span>
+            <span>Industry 4.0</span>
+            <span>Smart Factory</span>
           </div>
 
-          <a href="#" class="youtube-btn">Watch Demo →</a>
+          <div style="margin-top:25px; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,0.08);">
+            <iframe 
+              width="100%" 
+              height="220" 
+              src="https://www.youtube.com/embed/u2BfVmmaWvk" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <a href="https://www.youtube.com/watch?v=u2BfVmmaWvk" target="_blank" class="youtube-btn">
+            Open on YouTube →
+          </a>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Container Detection" style="width:100%; border-radius:20px; margin-bottom:20px; height:220px; object-fit:cover;">
+
+          <h3>AI Container Detection & Counting System</h3>
+
+          <p>
+            Computer vision system for detecting container conditions,
+            monitoring production logistics, and automatically counting accessories.
+          </p>
+
+          <br>
+
+          <p class="text-muted">
+            Features:
+            AI detection, automatic counting, smart analytics,
+            industrial monitoring dashboard, and production efficiency tracking.
+          </p>
+
+          <div class="tech-stack">
+            <span>Computer Vision</span>
+            <span>Python</span>
+            <span>AI Detection</span>
+            <span>Analytics</span>
+          </div>
+
+          <div style="margin-top:25px; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,0.08);">
+            <iframe 
+              width="100%" 
+              height="220" 
+              src="https://www.youtube.com/embed/u2BfVmmaWvk" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <a href="https://www.youtube.com/watch?v=u2BfVmmaWvk" target="_blank" class="youtube-btn">
+            Open on YouTube →
+          </a>
         </div>
 
       </div>
@@ -525,16 +761,65 @@
       <h2 class="section-title">Education</h2>
 
       <div class="card education-card">
-        <h3>Bachelor of Electrical & Electronics Engineering</h3>
+        <h3>Universitas Muria Kudus</h3>
+        <p class="text-muted">Bachelor of Engineering (B.E.) - Electrical & Electronics Engineering • 2016 - 2020</p>
 
-        <p class="text-muted">Universitas Muria Kudus</p>
+        <br><br>
+
+        <h3>Cisco Networking Academy</h3>
+        <p class="text-muted">CCNA Routing & Switching • 2013 - 2015</p>
+
+        <br><br>
+
+        <h3>SMK Muhammadiyah Kudus</h3>
+        <p class="text-muted">Computer Network Engineering • 2012 - 2015</p>
+      </div>
+
+      <br><br>
+
+      <h2 class="section-title">Certifications</h2>
+
+      <div class="card education-card">
+        <h3>Analyze Images with the Cloud Vision API Skill Badge</h3>
+        <br>
+        <h3>FreeRTOS</h3>
+        <br>
+        <h3>Generative AI Explorer - Vertex AI</h3>
+      </div>
+
+      <br><br>
+
+      <h2 class="section-title">Awards & Achievements</h2>
+
+      <div class="card education-card">
+        <h3>Best Graduate - Electrical Engineering Undergraduate Program</h3>
+        <br>
+        <h3>Academic Achievement Improvement Scholarship</h3>
+        <br>
+        <h3>Highest Test Score of Electrical Engineering Admission</h3>
+        <br>
+        <h3>Best Employee</h3>
+        <br>
+        <h3>Stakeholder Representative – Accreditation Assessment</h3>
+      </div>
+
+      <br><br>
+
+      <h2 class="section-title">Languages</h2>
+
+      <div class="card education-card">
+        <h3>Bahasa Indonesia</h3>
+        <p class="text-muted">Native / Bilingual</p>
 
         <br>
 
-        <p class="text-muted">
-          Focused on electronics systems, industrial automation, robotics,
-          embedded systems, and smart technologies.
-        </p>
+        <h3>English</h3>
+        <p class="text-muted">Professional Working Proficiency</p>
+
+        <br>
+
+        <h3>Spanish</h3>
+        <p class="text-muted">Elementary</p>
       </div>
     </div>
   </section>
@@ -553,9 +838,14 @@
         smart manufacturing, computer vision, and embedded technology projects.
       </p>
 
-      <div class="cmailto:rizkisaputrasembiring.rss@gmail.com<a href="mailto:rizkisaputrasembiring.rss@gmail.cominhttps://github.com/cracktiestmary">Email Me</a>
+      <div class="contact-buttons">
+        <a href="mailto:rizkisaputrasembiring.rss@gmail.com" class="btn-primary">Email Me</a>
 
-        <a href="https://gith" target="_blank" class="btn-secondary">https://www.linkedin.com/in/rizkisaputrasembiring/    <a href="https://linkedin. class="btn-secondary">
+        <a href="https://github.com/cracktiest" target="_blank" class="btn-secondary">
+          GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/rizkisaputrasembiring/" target="_blank" class="btn-secondary">
           LinkedIn
         </a>
       </div>
